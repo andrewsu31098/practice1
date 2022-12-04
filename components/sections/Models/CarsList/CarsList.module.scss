@@ -1,0 +1,160 @@
+@import "../../../../styles/utilities/_colors.scss";
+@import "../../../../styles/utilities/_breakpoints.scss";
+
+.NewCarsContainer {
+  margin-block-start: 54px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include mobile-breakpoint-down {
+    margin-block-start: 16px;
+  }
+  .NewFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    .title {
+      text-align: center;
+      font-size: 1.5rem;
+      @include tablet-breakpoint-down {
+        font-size: 1rem;
+      }
+    }
+
+    .CarFlex {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+
+      @include tablet-breakpoint-down {
+        flex-direction: column;
+        align-items: center;
+      }
+      @include mobile-breakpoint-down {
+      }
+      .SpecsWrapper {
+        max-width: 400px;
+        flex-basis: 400px;
+        flex-grow: 1;
+        padding-left: 32px;
+        padding-top: 32px;
+        @include tablet-breakpoint-down {
+          padding: 0px;
+          flex-basis: 0px;
+        }
+        @include mobile-breakpoint-down {
+          font-size: 1rem;
+        }
+        .Name {
+          width: fit-content;
+          font-size: 1.5rem;
+          border-bottom: 3px lighten(black, 30%) solid;
+          border-radius: 1px;
+          letter-spacing: 0.2rem;
+          padding-bottom: 8px;
+          @include tablet-breakpoint-down {
+            font-size: 1rem;
+          }
+          @include mobile-breakpoint-down {
+            font-size: 0.8rem;
+          }
+        }
+        .Price {
+          margin-top: 8px;
+          color: lighten(black, 30%);
+          font-size: 0.9rem;
+          @include tablet-breakpoint-down {
+            font-size: 0.7rem;
+          }
+        }
+        .Features {
+          font-size: 0.8rem;
+          li {
+            margin-bottom: 12px;
+          }
+        }
+      }
+      .ImageWrapper {
+        position: relative;
+        max-width: 400px;
+        flex-basis: 400px;
+        flex-grow: 1;
+        height: 400px;
+        padding-right: 32px;
+        padding-bottom: 100px;
+        @include tablet-breakpoint-down {
+          padding-top: 25px;
+          padding-bottom: 50px;
+          padding-right: 0px;
+          height: 300px;
+          flex-basis: 0;
+        }
+        @include mobile-breakpoint-down {
+          padding-top: 0px;
+          padding-bottom: 0px;
+          margin-bottom: 50px;
+          min-height: 200px;
+          font-size: 1rem;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: scale-down;
+        }
+      }
+
+      %mirror {
+        position: absolute;
+        max-width: 300px;
+        height: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: scale-down;
+          opacity: 0.7;
+        }
+      }
+      .ImageMirrorRight {
+        @extend %mirror;
+        right: -20vw;
+      }
+      .ImageMirrorLeft {
+        @extend %mirror;
+        left: -28vw;
+      }
+
+      .IconWrapperLeft {
+        position: absolute;
+        left: calc(50% - 32px);
+        bottom: 80px;
+        cursor: pointer;
+        @include tablet-breakpoint-down {
+          top: 250px;
+        }
+        @include mobile-breakpoint-down {
+          top: 200px;
+        }
+      }
+      .IconWrapperRight {
+        position: absolute;
+        right: calc(50% - 32px);
+        bottom: 80px;
+        cursor: pointer;
+        @include tablet-breakpoint-down {
+          top: 250px;
+        }
+        @include mobile-breakpoint-down {
+          top: 200px;
+        }
+      }
+    }
+  }
+}

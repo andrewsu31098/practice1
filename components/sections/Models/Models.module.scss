@@ -1,0 +1,84 @@
+@import "../../../styles/utilities/_colors.scss";
+@import "../../../styles/utilities/_breakpoints.scss";
+
+.ModelsContainer {
+  min-height: 720px;
+  background-color: $edgy-white;
+  padding: 80px;
+  @include tablet-breakpoint-down {
+    padding-inline: 40px;
+  }
+  @include mobile-breakpoint-down {
+    padding-inline: 16px;
+  }
+
+  .ModelsFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Title {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      font-size: 1rem;
+      color: black;
+      font-weight: 800;
+      max-width: 1000px;
+      width: 100%;
+      border-bottom: 1px lighten(black, 20%) dotted;
+      @include tablet-breakpoint-down {
+        font-size: 0.8rem;
+      }
+    }
+
+    .ConditionFlex {
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 400;
+      color: black;
+      font-family: "EB Garamond";
+
+      .Border {
+        width: 1px;
+        height: 48px;
+        border-right: 1px solid black;
+      }
+      .New,
+      .Used {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex: 1 1 auto;
+        cursor: pointer;
+        span {
+          transition: border-bottom 0.2s;
+        }
+        @include tablet-breakpoint-down {
+          font-size: 1.5rem;
+        }
+        @include mobile-breakpoint-down {
+          font-size: 1rem;
+        }
+      }
+      .New {
+        &.NewCondition span {
+          color: #4267b2;
+          border-bottom: 3px #4267b2 double;
+        }
+      }
+      .Used {
+        &:not(.NewCondition) span {
+          color: #4267b2;
+
+          border-bottom: 3px #4267b2 double;
+        }
+      }
+    }
+  }
+}

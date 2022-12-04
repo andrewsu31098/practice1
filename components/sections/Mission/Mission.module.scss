@@ -1,0 +1,139 @@
+@import "../../../styles/utilities/_colors.scss";
+@import "../../../styles/utilities/_breakpoints.scss";
+
+.MissionContainer {
+  max-height: 700px;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+
+  .Divider {
+    width: 100%;
+    // border-block: 1px black dotted;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    img {
+      fill: black;
+      flex-shrink: 0;
+      width: 5%;
+      height: 10px;
+      object-fit: fill;
+    }
+  }
+
+  .Header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-block: 40px;
+    font-family: EB Garamond;
+  }
+  .MissionGrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 64px;
+
+    @include tablet-breakpoint-down {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      row-gap: 16px;
+      .VideoWrapper {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        min-height: 300px;
+        width: 100%;
+        video {
+          min-width: 100% !important;
+        }
+      }
+
+      .ImageWrapper {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        min-height: 300px;
+        width: 100%;
+        img {
+          min-width: 100% !important;
+        }
+      }
+    }
+
+    &.visited {
+      .TransitionWrapper {
+        width: 100% !important;
+        transition: width 2s ease-out;
+      }
+    }
+
+    .VideoWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      overflow: hidden;
+      .TransitionWrapper {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        overflow: hidden;
+
+        video {
+          max-width: 100%;
+          height: 350px;
+          width: 50vw;
+          min-width: 50vw;
+          object-fit: cover;
+          transition: width 2s ease-out 0.1s;
+        }
+      }
+    }
+    .ImageWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      overflow: hidden;
+      //Transition Wrapper and 50vw to keep image still in center
+      .TransitionWrapper {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        height: 350px;
+        overflow: hidden;
+        img {
+          min-width: 50vw;
+          height: 350px;
+          width: 50vw;
+          object-fit: cover;
+          transition: width 7s ease-out 0.1s;
+          object-position: top;
+        }
+      }
+    }
+
+    .ExplanationFlex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px;
+      .Title {
+        text-align: left;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+      .Description {
+        text-align: left;
+        font-weight: 400;
+        p {
+          font-size: 0.8rem;
+          color: lighten(black, 40%);
+        }
+      }
+    }
+  }
+}
