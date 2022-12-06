@@ -5,6 +5,7 @@
   min-height: 720px;
   background-color: $edgy-white;
   padding: 80px;
+  overflow-x: hidden;
   @include tablet-breakpoint-down {
     padding-inline: 40px;
   }

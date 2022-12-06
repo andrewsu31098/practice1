@@ -33,10 +33,6 @@ export default function Mission(props) {
         <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
         <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
         <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
-        <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
-        <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
-        <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
-        <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
       </div>
       <div className={styles.Header}>About Us</div>
       <div

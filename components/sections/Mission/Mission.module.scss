@@ -2,15 +2,14 @@
 @import "../../../styles/utilities/_breakpoints.scss";
 
 .MissionContainer {
-  max-height: 700px;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: white;
 
   .Divider {
     width: 100%;
     // border-block: 1px black dotted;
-    margin-top: 80px;
+    padding-top: 80px;
     display: flex;
     justify-content: center;
     img {

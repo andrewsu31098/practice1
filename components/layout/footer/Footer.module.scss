@@ -1,0 +1,39 @@
+@import "../../../styles/utilities/_colors.scss";
+@import "../../../styles/utilities/_breakpoints.scss";
+
+$subtitle: gray;
+$text: white;
+
+.FooterContainer {
+  height: 300px;
+  min-height: 300px;
+  background-color: $layout-background;
+  padding-block: 50px;
+  .FooterFlex {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .Links {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-evenly;
+      color: $text;
+      font-weight: 700;
+    }
+    .About {
+      color: $subtitle;
+      max-width: 400px;
+
+      .Name {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .Description {
+        text-align: center;
+      }
+    }
+  }
+}
