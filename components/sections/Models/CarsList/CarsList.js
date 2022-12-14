@@ -43,8 +43,8 @@ export default function CarsList(props) {
             <div className={styles.Name}>{props.cars[carIndex].name}</div>
             <div className={styles.Price}>{props.cars[carIndex].price}</div>
             <ul className={styles.Features}>
-              {props.cars[carIndex].features.map((feature) => (
-                <li>{feature}</li>
+              {props.cars[carIndex].features.map((feature, index) => (
+                <li key={`car ${index}`}>{feature}</li>
               ))}
             </ul>
           </div>
