@@ -1,0 +1,66 @@
+@import "../../../styles/utilities/colors";
+@import "../../../styles/utilities/breakpoints";
+
+.ContactContainer {
+  min-width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-inline: 40px;
+  .ContactFlex {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .Header {
+      font-family: EB Garamond;
+      text-align: center;
+      border-bottom: 1px black dotted;
+      padding-bottom: 40px;
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .Title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.3rem;
+        margin-bottom: 24px;
+      }
+      .Description {
+        font-size: 1rem;
+        max-width: 400px;
+        color: lighten(black, 20%);
+      }
+    }
+    .FormWrapper {
+      width: 100%;
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        * {
+          font-family: EB Garamond;
+          margin-top: 40px;
+          background-color: rgba(0, 0, 0, 0);
+        }
+        textarea {
+          border: black 2px solid;
+        }
+        .Submit {
+          cursor: pointer;
+          color: $edgy-white;
+          background-color: lighten(black, 10%);
+        }
+        .SuccessMessage {
+          color: rgb(0, 150, 0);
+        }
+      }
+    }
+  }
+}

@@ -26,7 +26,7 @@
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    margin-block: 40px;
+    margin-block: 24px;
     font-family: EB Garamond;
   }
   .MissionGrid {
@@ -39,7 +39,7 @@
 
     @include tablet-breakpoint-down {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
       row-gap: 16px;
       .VideoWrapper {
         grid-row-start: 1;
@@ -119,7 +119,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 50px;
+      padding-inline: 48px;
+      padding-block: 40px;
       .Title {
         text-align: left;
         font-weight: 500;

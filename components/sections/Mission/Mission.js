@@ -21,7 +21,7 @@ export default function Mission(props) {
   }, []);
 
   return (
-    <div className={styles.MissionContainer}>
+    <div id="about" className={styles.MissionContainer}>
       <div className={styles.Divider}>
         <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}
         <img src="/dash4.svg"></img> <img src="/dash4.svg"></img>{" "}

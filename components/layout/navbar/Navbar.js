@@ -10,17 +10,17 @@ import styles from "./Navbar.module.scss";
 const navPages = [
   { name: "Home", path: "/", value: 0 },
   {
-    name: "About Us",
-    path: "/about",
+    name: "Our Mission",
+    path: "#about",
     value: 1,
   },
   {
-    name: "Our Models",
-    path: "/booths",
+    name: "See Models",
+    path: "#models",
     value: 2,
   },
   {
-    name: "Dealerships ",
+    name: "Contact ",
     path: "/contact",
     value: 3,
   },

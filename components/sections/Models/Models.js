@@ -1,7 +1,7 @@
 import styles from "./Models.module.scss";
 import { useState } from "react";
 
-import { usedCars, newCars } from "./data/carsdata.js";
+import { usedCars, newCars } from "../../../public/data/carsdata.js";
 import dynamic from "next/dynamic";
 const CarsList = dynamic(() => import("./CarsList/CarsList"), { ssr: false });
 export default function Models(props) {

@@ -76,6 +76,7 @@ export default function CarsList(props) {
               <SlArrowRight />
             </div>
           </IconContext.Provider>
+          <div className={styles.Button}>Select Model</div>
         </div>
       </div>
     </div>
