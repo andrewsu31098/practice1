@@ -4,7 +4,7 @@ export default function Landing(props) {
   return (
     <div className={styles.LandingContainer}>
       <div className={styles.ImageWrapper}>
-        <img src="/photos/coolcar.jpg" />
+        <img src="/photos/raincar.jpg" />
       </div>
       <div className={styles.OverlayContainer}>
         <div className={styles.OverlayFlex}>
