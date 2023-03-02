@@ -11,12 +11,12 @@ const navPages = [
   { name: "Home", path: "/", value: 0 },
   {
     name: "Our Mission",
-    path: "#about",
+    path: "/#about",
     value: 1,
   },
   {
     name: "See Models",
-    path: "#models",
+    path: "/#models",
     value: 2,
   },
   {
